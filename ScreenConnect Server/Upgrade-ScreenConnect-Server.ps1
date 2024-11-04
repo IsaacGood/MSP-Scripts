@@ -58,7 +58,7 @@ Write-Host
 
 $svcPath = [System.IO.Path]::Combine(${env:ProgramFiles(x86)}, "ScreenConnect\Bin", "ScreenConnect.Service.exe")
 if(!(Test-Path $svcPath)) {
-    Write-Host "Unable to locate ScreenConnect Service executable file. Must already be installed. Quitting." -ForegroundColor Red
+    Write-Host "Unable to locate ScreenConnect Service executable file. Quitting." -ForegroundColor Red
     exit 1
 }
 $svcVersion = (Get-Command $svcPath).FileVersionInfo.FileVersion
